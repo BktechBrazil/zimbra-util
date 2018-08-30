@@ -2,7 +2,7 @@
 
 account=$1
 
-#Aceitar caracteres com acento
+#Handle Portuguese special characters
 export LC_ALL="pt_BR.UTF-8"
 
 WHO=`whoami`
