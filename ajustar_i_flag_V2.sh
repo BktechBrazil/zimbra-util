@@ -1,5 +1,7 @@
 #!/bin/bash
  
+ #Handle Portuguese special characters
+ export LC_ALL="pt_BR.UTF-8"
  account=$1
  
  if [ x"$(id -n -u)" != x"zimbra" ]
