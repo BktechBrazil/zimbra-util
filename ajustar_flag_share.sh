@@ -1,13 +1,14 @@
 #!/bin/bash
 #Fabio S. Schmidt - fabio@bktech.com.br
-#
-#Script para remover a flag "i" caso encontre em alguma pasta
+# *** SCRIPT VALIDO SOMENTE PARA AMBIENTES COM O ZIMLET SHARE TOOLKIT INSTALADO! ***
+#Script para remover a flag "i" caso encontre em alguma pasta 
+#Esse script ira recriar os compartilhamentos novamente
 #pastas com flag i podem nao ser exibidas pelos clientes de e-mail
 #
 #Fonte: https://wiki.zimbra.com/wiki/Clearing_the_%22don%27t_inherit_grants_from_parent_folder%22(i)_flag
 #
 # - Script modificado para tratar acentuacao do portugues e traduzido
-# - Esse script deve ser executado na caixa compartilhada e ira remover os compartilhamentos, sendo necessario criar novamente
+
  
 #Tratar acentuacao do portugues 
 export LC_ALL="pt_BR.UTF-8"
