@@ -13,26 +13,24 @@ echo "$DATE" >> /tmp/collect_zimbra_shared_folders.txt
 echo "" >> /tmp/collect_zimbra_shared_folders.txt
 echo Getting Folder Share Grants... >> /tmp/collect_zimbra_shared_folders.txt
 zmprov -l gaa > $USER_FILE
+#zmprov ga gleber@capitallinux.com.br | grep -i zimbraMailAlias | cut -d" " -f2
 while read USERS
 do
-	echo Account: $USERS >> /tmp/collect_zimbra_shared_folders.txt
+    ALIAS=`zmprov ga $USERS | grep -i zimbraMailAlias | cut -d" " -f2 | tr '\n' ' ' `
+	echo "Account: $USERS | Alias: $ALIAS" >> /tmp/collect_zimbra_shared_folders.txt
 	for USER in $USERS
 	do
 		echo
 		zmmailbox -z -m $USER gaf > /tmp/shares$$
-#		echo Mailbox folders for $USER
-#		cat /tmp/shares$$
-#		echo ; echo Accepted shared folders from others:
 		grep : /tmp/shares$$ | cut -c 43-
-#		echo
 		zmmailbox -z -m $USER gaf | egrep -v ':|Count|----------' | cut -c 43- > /tmp/shares$$
 		cat /tmp/shares$$ |while read FOLDER 
 		do
 			TESTE=`zmmailbox -z -m $USER gfg "$FOLDER" | sed -n 3p`
 			if [[ $TESTE != "" ]]; then
 				echo Grants for $USER: $FOLDER:
+# 				ALIAS=`zmprov ga $USER | grep -i zimbraMailAlias | cut -d" " -f2				>> /tmp/collect_zimbra_shared_folders.txt`
 				zmmailbox -z -m $USER gfg "$FOLDER" >> /tmp/collect_zimbra_shared_folders.txt
-#				echo
 			fi
 		done
 			echo
