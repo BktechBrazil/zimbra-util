@@ -8,12 +8,10 @@
 DATE=`date '+%d-%m-%Y'`
 USER_FILE="/tmp/users.txt"
 echo "" > /tmp/collect_zimbra_shared_folders.txt
-#clear
 echo "$DATE" >> /tmp/collect_zimbra_shared_folders.txt
 echo "" >> /tmp/collect_zimbra_shared_folders.txt
 echo Getting Folder Share Grants... >> /tmp/collect_zimbra_shared_folders.txt
 zmprov -l gaa > $USER_FILE
-#zmprov ga gleber@capitallinux.com.br | grep -i zimbraMailAlias | cut -d" " -f2
 while read USERS
 do
     ALIAS=`zmprov ga $USERS | grep -i zimbraMailAlias | cut -d" " -f2 | tr '\n' ' ' `
@@ -29,7 +27,6 @@ do
 			TESTE=`zmmailbox -z -m $USER gfg "$FOLDER" | sed -n 3p`
 			if [[ $TESTE != "" ]]; then
 				echo Grants for $USER: $FOLDER:
-# 				ALIAS=`zmprov ga $USER | grep -i zimbraMailAlias | cut -d" " -f2				>> /tmp/collect_zimbra_shared_folders.txt`
 				zmmailbox -z -m $USER gfg "$FOLDER" >> /tmp/collect_zimbra_shared_folders.txt
 			fi
 		done
