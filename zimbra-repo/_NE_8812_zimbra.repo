@@ -1,0 +1,15 @@
+[zimbra]
+name=Zimbra RPM Repository
+baseurl=https://repo.zimbra.com/rpm/87/rhel7
+gpgcheck=1
+enabled=1
+[zimbra-8812-oss]
+name=Zimbra New RPM Repository
+baseurl=https://repo.zimbra.com/rpm/8812/rhel7
+gpgcheck=1
+enabled=1
+[zimbra-8812-network]
+name=Zimbra New RPM Repository
+baseurl=https://repo.zimbra.com/rpm/8812-ne/rhel7
+gpgcheck=1
+enabled=1
