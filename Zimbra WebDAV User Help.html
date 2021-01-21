@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://barrydegraaff.github.io/owncloud/ -->
+<html lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="https://barrydegraaff.github.io/icon.png">
+<title>Zimbra WebDAV User Help</title>
+
+<style type="text/css">
+h1
+{
+   font-size:18px;
+}
+h2
+{
+   font-size:16px;
+}
+table {
+    border-collapse: collapse;
+    background-color:white; 
+}
+td{
+   border:1px solid #888888;
+   min-width:175px;
+   padding:10px;
+}
+hr {
+  border: 0;
+  width: 100%;
+   color: #888888;
+   background-color: #888888;
+   height: 1px;  
+}
+img
+{
+border: 1px solid #888888;
+   
+}
+</style>
+</head>
+
+
+<body style="font-family: sans-serif; font-size:14px;">    
+<div style="width:990px">
+<h1>Zimbra WebDAV Client User Help</h1>
+<h2>Contents</h2>
+<ul>
+<li><a href="https://barrydegraaff.github.io/owncloud/#attach-from-owncloud">Sending attachments from WebDAV</a></li>
+<li><a href="https://barrydegraaff.github.io/owncloud/#share-as-link">Sharing files with a public link</a></li>
+<li><a href="https://barrydegraaff.github.io/owncloud/#emails-to-owncloud">Saving emails to WebDAV</a></li>
+<li><a href="https://barrydegraaff.github.io/owncloud/#attachment-to-owncloud">Saving attachments to WebDAV</a></li>
+<li><a href="https://barrydegraaff.github.io/owncloud/#briefcase-to-owncloud">Saving briefcase documents to WebDAV</a></li>
+<li><a href="https://barrydegraaff.github.io/owncloud/#preferences">Configure WebDAV Client</a></li>
+<li><a href="https://barrydegraaff.github.io/owncloud/#about">About Zimbra WebDAV Client</a></li>
+</ul>
+<br>
+
+<br><br><section id="attach-from-owncloud">
+<h1>Sending attachments from WebDAV</h1>
+When composing email in Zimbra, you can attach files from WebDAV directly. Click the arrow next to <i>Attach</i>.<br>
+<br><img src="./Zimbra WebDAV User Help_files/attach-menu.png" alt=""><br>
+<br>You can select files by checking them, also you can open folders by clicking on the blue folder icons. Click <i>Attach</i> when done.<br>
+<br><img src="./Zimbra WebDAV User Help_files/attach-from-dialog.png" alt=""><br>
+<br>Attaching files may take some time, a dialog is displayed during this process. The message <i>Draft Saved</i> is displayed once your attachments are ready.<br>
+<br><img src="./Zimbra WebDAV User Help_files/attach-from-draft.png" alt=""><br>
+
+<hr><br>
+
+
+<br><br></section><section id="share-as-link">
+<h1>Sharing files with a public link</h1>
+Instead of sending files as attachments, you can also share file by means of a public link. This is convenient for files that are too large to be send via email. 
+<ul>
+<li>Link sharing does not work with <a target="_blank" href="https://doc.owncloud.org/server/8.1/admin_manual/configuration_files/external_storage_configuration_gui.html">external storage</a> (Windows Shares)</li>
+<li>Link sharing may have been disabled by your administrator</li>
+<li>This feature is only available if you use WebDAV Client with ownCloud and/or Nextcloud</li>
+</ul>
+
+Click the arrow next to <i>Attach</i>.<br>
+<br><img src="./Zimbra WebDAV User Help_files/attach-menu.png" alt=""><br>
+<br>Check the option <i>Link to file</i>. You can also protect the shared link by typing a password in the <i>Password setup</i> field.<br>
+<br><img src="./Zimbra WebDAV User Help_files/share-as-link-dialog.png" alt=""><br>
+<br>You can select files by checking them, also you can open folders by clicking on the blue folder icons. Click <i>Attach</i> when done. The selected files are displayed as links in the email body.<br>
+<br><img src="./Zimbra WebDAV User Help_files/share-as-link-result.png" alt=""><br>
+</section><br>
+
+
+<br><br><section id="emails-to-owncloud">
+<h1>Saving emails to WebDAV</h1>
+You can save emails including attachments to WebDAV by right clicking the email message and click save to WebDAV.
+<hr><br>
+
+
+<br><br></section><section id="attachment-to-owncloud">
+<h1>Saving attachments to WebDAV</h1>
+You can save a single attachment by clicking on the <i>WebDAV</i> link that is displayed after each attachment in your inbox. The attachment is saved to WebDAV in the folder that is defined in your <a href="https://barrydegraaff.github.io/owncloud/#preferences">preferences</a>.<br>
+<br><img src="./Zimbra WebDAV User Help_files/save-attachment.png" alt=""><br>
+<hr><br>
+
+
+<br><br></section><section id="briefcase-to-owncloud">
+<h1>Saving briefcase documents to WebDAV</h1>
+You can save briefcase documents to WebDAV  by right clicking the email message and click save to WebDAV.
+<hr><br>
+
+
+<br><br></section><section id="preferences">
+<h1>Configure WebDAV Client</h1>
+Find the WebDAV menu under <i>Zimlets</i> in your Zimbra web mail. Right click on WebDAV and select <i>Preferences</i>. <br>
+<br><img src="./Zimbra WebDAV User Help_files/preferences-menu.png" alt=""><br>
+<br>
+<table>
+<tbody><tr><td>Username</td><td>Your WebDAV username, is set to your Zimbra username by default</td></tr>
+<tr><td>Password</td><td>Your WebDAV password</td></tr>
+<tr><td>Store password<sup>1</sup></td><td>If checked, the password is stored in plain text in Zimbra LDAP. If not checked you have to provide password for each session</td></tr>
+</tbody></table>
+<br>
+<sup>1</sup> <i>Store password</i> may have been disabled by your administrator.
+<br>
+<br><img src="./Zimbra WebDAV User Help_files/preferences.png" alt=""><br>
+The other fields should be automatically filled with correct details by your system administrator.
+<br>
+
+<br><br></section><section id="about">
+<h1>Zimbra WebDAV Client</h1>If you find Zimbra WebDAV Client useful and want to support its continued development, you can make donations via:
+<ul>
+<li>PayPal: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=info%40barrydegraaff%2etk&amp;lc=US&amp;item_name=Zimbra%20WebDAV%20Client&amp;no_note=0&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest">info@barrydegraaff.tk</a></li>
+<li>Bank transfer: IBAN NL55ABNA0623226413 ; BIC ABNANL2A</li>
+</ul>
+Please report <a href="https://github.com/barrydegraaff/owncloud-zimlet/issues">bugs</a>
+ on Github.
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+<div id="njcdgcofcbnlbpkpdhmlmiblaglnkpnj"></div></body></html>
