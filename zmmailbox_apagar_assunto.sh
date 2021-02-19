@@ -1,6 +1,7 @@
 #!/bin/bash
 # FABIO S. SCHMIDT - fabio@respirandolinux.com.br
-# 12/03/2017
+# Criado: 12/03/2017
+# Revisado: 18/02/2021
 # Script para procurar todas as mensagens com o assunto (subject) informado e deletar
 # Limitacao: Expressao regular, qualquer assunto contendo a palavra sera considerado
 
