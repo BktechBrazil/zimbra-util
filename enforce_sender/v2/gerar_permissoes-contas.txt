@@ -1,0 +1,33 @@
+#!/bin/bash
+### EM DESENVOLVIMENTO ####
+
+#FABIO S. SCHMIDT
+#SCRIPT PARA OBTER RELAÇÃO DE PERMISSOES DE ENVIO - SENDAS - DE CONTAS
+#E
+#CRIAR ARQUIVO PARA REGRA DE ALLOW NO POSTFIX
+
+
+DOMAIN="@bktech.com.br"
+
+rm -f /tmp/resultado_sendas.txt
+cont1=0
+cont2=0
+
+# RELACAO DE CONTAS OBTIDAS - AJUSTE O FILTRO COMO NECESSITAR
+# CONSULTA LIMITANDO A COS "UTA"
+for i in $(zmprov -l sa "(zimbraCosId=d58ae75d-2718-4066-8455-7411007e60aa)" | cut -d "@" -f 1); do
+
+zmprov gg -t account "$i$DOMAIN" | grep sendAs | grep -v "^-" | grep -v "^target" | awk '{ print $6 }' | cut -d "@" -f 1  > /tmp/relacao_sendas.txt
+cont1=$((cont1+1))
+echo "####### $cont1 $i$DOMAIN"
+cont2=0
+for j in $(cat /tmp/relacao_sendas.txt); do
+cont2=$((cont2+1))
+echo -n "$cont2"
+
+#GERA O ARQUIVO QUE SERA UTILIZADO PARA AS PERMISSOES DE ENVIO
+echo "$i$DOMAIN $j$DOMAIN" >> /tmp/resultado_sendas.txt
+done
+echo " "
+
+done
