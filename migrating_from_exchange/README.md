@@ -1,19 +1,19 @@
 **Source: (https://web.archive.org/web/20201027040701/https://help.bittitan.com/hc/en-us/articles/115008258628-How-do-I-disable-the-throttling-policy-on-Exchange-)**
 
-Exchange Server has very low throttling policy limits. We recommend disabling the throttling limits during the migration.
+## Exchange Server has very low throttling policy limits. We recommend disabling the throttling limits during the migration.
 
-Notes:
+> Notes:
 
-This is only relevant if throttling policies are enabled in the Exchange environment.
+> This is only relevant if throttling policies are enabled in the Exchange environment.
 Exchange Server 2007 does not have configuration options for throttling policies, as future versions do. For Exchange 2007's version of ​Client Throttling, see Understanding Client Throttling.
 Exchange 2003 does not have any throttling policies, or any client throttling.
 When migrating to Office 365, you cannot disable throttling on Office 365.
 If you are creating or applying a throttling policy on Exchange, you will need to use delegation for this endpoint.
 Option 1: Disable throttling against only the migrating account (if not using impersonation). This way, the admin account can migrate at a faster rate because it is not subjected to any throttling.
 
-Notes:
+> Notes:
 
-Use this option if not using impersonation during the migration, but instead using delegation.
+> Use this option if not using impersonation during the migration, but instead using delegation.
 If migrating using admin credentials, it is only necessary to disable throttling against the admin account, rather than all users.
 If migrating mailboxes using administrative credentials at the Source, but not using impersonation, we recommend disabling throttling limits on this administrative account in order to improve the speed of migration.
 We recommend the creation of a migration administrative account and disabling policy enforcement for this account.
